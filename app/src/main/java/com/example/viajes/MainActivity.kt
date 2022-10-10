@@ -14,12 +14,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val listaLugares = listOf(
-            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg","46.414382,10.013988"),
-            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg","46.414382,10.013988"),
-            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg","46.414382,10.013988"),
-            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg","46.414382,10.013988"),
-            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg","46.414382,10.013988"),
-            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg","46.414382,10.013988"))
+            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg","48.85341, 2.3488"),
+            Lugar ("Sevilla","https://i.imgur.com/Gb2HR1f.png","37.3828300,-5.9731700"),
+            Lugar ("Cadiz","https://i.imgur.com/uwTpMRo.png","36.5297800,-6.2946500"),
+            )
 
 
         binding.recview.adapter = lugarAdapter(listaLugares){
