@@ -14,27 +14,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val listaLugares = listOf(
-            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg",""),
-            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg",""),
-            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg",""),
-            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg",""),
-            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg",""),
-            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg",""))
+            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg","46.414382,10.013988"),
+            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg","46.414382,10.013988"),
+            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg","46.414382,10.013988"),
+            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg","46.414382,10.013988"),
+            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg","46.414382,10.013988"),
+            Lugar ("Paris","https://i.imgur.com/QErAXxO.jpg","46.414382,10.013988"))
 
 
         binding.recview.adapter = lugarAdapter(listaLugares){
-            val gmmIntentUri = Uri.parse("google.streetview:cbll=46.414382,10.013988")
+            val coordenada = it.cod;
+            val gmmIntentUri = Uri.parse("google.streetview:cbll=" + coordenada)
             val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
             mapIntent.setPackage("com.google.android.apps.maps")
             startActivity(mapIntent)
-            Lugar ->  val intent = Intent(this@MainActivity, DetailActivity::class.java)
-
-            intent.putExtra(DetailActivity.EXTRA_CONTACTO, contacto)
 
         }
 
-        binding.button.setOnClickListener(){
-
-        }
     }
 }
